@@ -29,19 +29,25 @@
           class="flex flex-col justify-center items-center md:items-start w-full bg-white rounded-md p-5 gap-2"
         >
           <p class="text-xs">Total</p>
-          <p id="total-count" class="text-2xl font-semibold text-[#002c5c]">0</p>
+          <p id="total-count" class="text-2xl font-semibold text-[#002c5c]">
+            0
+          </p>
         </div>
         <div
           class="flex flex-col justify-center items-center md:items-start w-full bg-white rounded-md p-5 gap-2"
         >
           <p class="text-xs">Interview</p>
-          <p id="interview-count" class="text-2xl font-semibold text-[#10B981]">0</p>
+          <p id="interview-count" class="text-2xl font-semibold text-[#10B981]">
+            0
+          </p>
         </div>
         <div
           class="flex flex-col justify-center items-center md:items-start w-full bg-white rounded-md p-5 gap-2"
         >
           <p class="text-xs">Rejected</p>
-          <p id="rejected-count" class="text-2xl font-semibold text-[#EF4444]">0</p>
+          <p id="rejected-count" class="text-2xl font-semibold text-[#EF4444]">
+            0
+          </p>
         </div>
       </section>
       <hr class="my-8" />
@@ -52,9 +58,27 @@
         <p id="available-jobs" class="text-gray-500">8 jobs</p>
       </div>
       <div id="category-btn-container" class="flex gap-10">
-        <button onclick="display('all-items')" id="all-items" class="active-btn all-items">All</button>
-        <button onclick="display('interview-items')" id="interview-items" class="common-btn interview-items">Interview</button>
-        <button onclick="display('rejected-items')" id="rejected-items" class="common-btn rejected-items">Rejected</button>
+        <button
+          onclick="display('all-items')"
+          id="all-items"
+          class="active-btn all-items"
+        >
+          All
+        </button>
+        <button
+          onclick="display('interview-items')"
+          id="interview-items"
+          class="common-btn interview-items"
+        >
+          Interview
+        </button>
+        <button
+          onclick="display('rejected-items')"
+          id="rejected-items"
+          class="common-btn rejected-items"
+        >
+          Rejected
+        </button>
       </div>
       <section id="all-cards-container" class="pb-10 space-y-5">
         <!-- card-1 -->
@@ -63,10 +87,12 @@
             <h3 class="company-name text-[#002c5c] text-xl font-semibold">
               Mobile First Corp
             </h3>
-            <i class="fa-solid fa-trash" id="delete-btn"></i>
+            <i class="fa-solid fa-trash"></i>
           </div>
           <p class="position text-gray-500">React Native Developer</p>
-          <ul class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1">
+          <ul
+            class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1"
+          >
             <li class="location">• Remote</li>
             <li class="type">• Full-time</li>
             <li class="salary">• $130,000 - $175,000</li>
@@ -89,12 +115,14 @@
         <div class="space-y-2 bg-white p-5 rounded-md demo-card">
           <div class="flex justify-between items-center">
             <h3 class="company-name text-[#002c5c] text-xl font-semibold">
-             WebFlow Agency
+              WebFlow Agency
             </h3>
-            <i class="fa-solid fa-trash" id="delete-btn"></i>
+            <i class="fa-solid fa-trash"></i>
           </div>
           <p class="position text-gray-500">Web Designer & Developer</p>
-          <ul class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1">
+          <ul
+            class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1"
+          >
             <li class="location">• Los Angeles, CA</li>
             <li class="type">• Part-time</li>
             <li class="salary">• $80,000 - $120,000</li>
@@ -119,10 +147,12 @@
             <h3 class="company-name text-[#002c5c] text-xl font-semibold">
               DataViz Solutions
             </h3>
-            <i class="fa-solid fa-trash" id="delete-btn"></i>
+            <i class="fa-solid fa-trash"></i>
           </div>
           <p class="position text-gray-500">Data Visualization Specialist</p>
-          <ul class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1">
+          <ul
+            class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1"
+          >
             <li class="location">• Boston, MA</li>
             <li class="type">• Full-time</li>
             <li class="salary">• $125,000 - $165,000</li>
@@ -147,10 +177,12 @@
             <h3 class="company-name text-[#002c5c] text-xl font-semibold">
               CloudFirst Inc
             </h3>
-            <i class="fa-solid fa-trash" id="delete-btn"></i>
+            <i class="fa-solid fa-trash"></i>
           </div>
           <p class="position text-gray-500">Backend Developer</p>
-          <ul class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1">
+          <ul
+            class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1"
+          >
             <li class="location">• Seattle, WA</li>
             <li class="type">• Full-time</li>
             <li class="salary">• $140,000 - $190,000</li>
@@ -175,10 +207,12 @@
             <h3 class="company-name text-[#002c5c] text-xl font-semibold">
               Innovation Labs
             </h3>
-            <i class="fa-solid fa-trash" id="delete-btn"></i>
+            <i class="fa-solid fa-trash"></i>
           </div>
           <p class="position text-gray-500">UI/UX Engineer</p>
-          <ul class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1">
+          <ul
+            class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1"
+          >
             <li class="location">• Austin, TX</li>
             <li class="type">• Full-time</li>
             <li class="salary">• $110,000 - $150,000</li>
@@ -204,10 +238,12 @@
             <h3 class="company-name text-[#002c5c] text-xl font-semibold">
               MegaCorp Solutions
             </h3>
-            <i class="fa-solid fa-trash" id="delete-btn"></i>
+            <i class="fa-solid fa-trash"></i>
           </div>
           <p class="position text-gray-500">JavaScript Developer</p>
-          <ul class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1">
+          <ul
+            class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1"
+          >
             <li class="location">• New York, NY</li>
             <li class="type">• Full-time</li>
             <li class="salary">• $130,000 - $170,00</li>
@@ -233,10 +269,12 @@
             <h3 class="company-name text-[#002c5c] text-xl font-semibold">
               StartupXYZ
             </h3>
-            <i class="fa-solid fa-trash" id="delete-btn"></i>
+            <i class="fa-solid fa-trash"></i>
           </div>
           <p class="position text-gray-500">Full Stack Engineer</p>
-          <ul class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1">
+          <ul
+            class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1"
+          >
             <li class="location">• Remote</li>
             <li class="type">• Full-time</li>
             <li class="salary">• $120,000 - $160,000</li>
@@ -262,10 +300,12 @@
             <h3 class="company-name text-[#002c5c] text-xl font-semibold">
               TechCorp Industries
             </h3>
-            <i class="fa-solid fa-trash" id="delete-btn"></i>
+            <i class="fa-solid fa-trash"></i>
           </div>
           <p class="position text-gray-500">Senior Frontend Developer</p>
-          <ul class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1">
+          <ul
+            class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1"
+          >
             <li class="location">• San Francisco, CA</li>
             <li class="type">• Part-time</li>
             <li class="salary">• $130,000 - $175,000</li>
@@ -287,9 +327,10 @@
       </section>
 
       <!-- interview card section -->
-       <section id="interview-cards" class="space-y-5 hidden"></section>
-       <!-- rejected cards section -->
-        <section id="rejected-cards" class="space-y-5 hidden"><h1>heelo</h1></section>
+      <section id="interview-cards" class="space-y-5 py-5 hidden"></section>
+      <!-- rejected cards section -->
+      <section id="rejected-cards" class="space-y-5 py-5 hidden">
+      </section>
     </main>
 
     <!-- scripted section -->

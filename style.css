@@ -10,6 +10,7 @@ text-[#002c5c]
 }
 body{
     background-color: #f1f2f4;
+    min-height: 100vh;
 }
 
 .common-btn{
