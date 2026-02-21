@@ -6,3 +6,11 @@
   <li>querySelectorAll: It will select all element like getElementsByClassName.</li>
 </ul>
 <p>querySelector and querySelectorAll these method are used user need to provide class or id selector with its name like CSS</p>
+
+<h2>Create and insert a new element into the DOM</h2>
+<ol>
+  <li>Firstly, we need to get the contianer where we want to appen the element</li>
+  <li>Secondly, we need to create a new element</li>
+  <li>Thirdly, add content or attributes</li>
+  <li>And finaly, we need to appen the element inside the parent or container using appenChild or appen method</li>
+</ol>
