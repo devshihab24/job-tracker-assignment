@@ -8,8 +8,10 @@ const availJobs = document.getElementById("available-jobs");
 const allCardsContainer = document.getElementById("all-cards-container");
 const interviewCardsContainer = document.getElementById("interview-cards");
 const rejectedCardsContainer = document.getElementById("rejected-cards");
+let currentStatus = 'all-items'
 
 function display(id) {
+    currentStatus = id
   // remove active class
   allItemsBtn.classList.remove("active-btn");
   interviewItemsBtn.classList.remove("active-btn");
@@ -35,6 +37,7 @@ function display(id) {
     interviewCardsContainer.classList.add("hidden");
     rejectedCardsContainer.classList.remove("hidden");
   }
+  calculate()
 }
 function displayContent(id) {
   console.log(id);
@@ -43,11 +46,22 @@ function displayContent(id) {
 // calculate job status
 
 function calculate() {
-  availJobs.innerText = `${allCardsContainer.children.length} jobs`;
-  document.getElementById("total-count").innerText =
-    allCardsContainer.children.length;
-  document.getElementById("interview-count").innerText = interviewList.length;
-  document.getElementById("rejected-count").innerText = rejectedList.length;
+  const total = allCardsContainer.children.length
+  const interviewCount = interviewList.length
+  const rejectedCount = rejectedList.length
+  document.getElementById('total-count').innerText = total
+  document.getElementById('interview-count').innerText = interviewCount
+  document.getElementById('rejected-count').innerText = rejectedCount
+
+  if(currentStatus == "all-items"){
+    availJobs.innerText = `${total} out of ${total}`
+  }
+  if(currentStatus == "interview-items"){
+    availJobs.innerText = `${interviewCount} out of ${total}`
+  }
+  if(currentStatus == "rejected-items"){
+    availJobs.innerText = `${rejectedCount} out of ${total}`
+  }
 }
 
 // main function
@@ -81,12 +95,16 @@ document.querySelector("main").addEventListener("click", function (event) {
       interviewList.push(cardInfo);
     }
     parentNode.querySelector(".job-status").innerText = "Applied";
+    rejectedList = rejectedList.filter(item=>item.companyName != cardInfo.companyName)
+    if(currentStatus == "rejected-items"){
+        appendCardOnRejectedSection()
+    }
     calculate();
     appendCardOnInterviewSection();
   }
 
   //   rejected button functionality
-  if (event.target.classList.contains("reject-btn")) {
+  else if (event.target.classList.contains("reject-btn")) {
     const companyName = parentNode.querySelector(".company-name").innerText;
     const position = parentNode.querySelector(".position").innerText;
     const location = parentNode.querySelector(".location").innerText;
@@ -109,10 +127,13 @@ document.querySelector("main").addEventListener("click", function (event) {
       rejectedList.push(cardInfo);
     }
     parentNode.querySelector(".job-status").innerText = "Rejected";
+    interviewList = interviewList.filter(item=>item.companyName != cardInfo.companyName)
+    if(currentStatus == "interview-items"){
+        appendCardOnInterviewSection()
+    }
     calculate();
     appendCardOnRejectedSection();
   }
-  console.log(rejectedList);
 });
 appendCardOnInterviewSection();
 appendCardOnRejectedSection();
