@@ -86,7 +86,7 @@ document.querySelector("main").addEventListener("click", function (event) {
       location,
       type,
       salary,
-      jobStatus: "Applied",
+      jobStatus: "Interview",
       description,
     };
     if (
@@ -94,7 +94,7 @@ document.querySelector("main").addEventListener("click", function (event) {
     ) {
       interviewList.push(cardInfo);
     }
-    parentNode.querySelector(".job-status").innerText = "Applied";
+    parentNode.querySelector(".job-status").innerText = "Interview";
     rejectedList = rejectedList.filter(item=>item.companyName != cardInfo.companyName)
     if(currentStatus == "rejected-items"){
         appendCardOnRejectedSection()
