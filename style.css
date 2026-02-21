@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/* 
+text-[#002c5c]
+*/
+
+*{
+      font-family: "Inter", sans-serif;
+}
+body{
+    background-color: #f1f2f4;
+}
+
+.common-btn{
+    padding: 8px 14px;
+    border: 1px solid;
+    border-radius: 6px;
+    color: gray;
+    background-color: white;
+}
+.active-btn{
+    padding: 8px 14px;
+    border: 1px solid;
+    border-radius: 6px;
+    color: white;
+    background-color: blue;
+}
+button:hover{
+    cursor: pointer;
+}
