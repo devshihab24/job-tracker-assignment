@@ -32,3 +32,9 @@ body {
 button:hover {
   cursor: pointer;
 }
+.demo-card{
+    transition: all 0.4s linear 0.1s;
+}
+.demo-card:hover{
+    transform: translateY(-10px);
+}

@@ -54,7 +54,7 @@ function calculate() {
   document.getElementById('rejected-count').innerText = rejectedCount
 
   if(currentStatus == "all-items"){
-    availJobs.innerText = `${total} out of ${total}`
+    availJobs.innerText = `${total} jobs`
   }
   if(currentStatus == "interview-items"){
     availJobs.innerText = `${interviewCount} out of ${total}`
@@ -157,7 +157,7 @@ function appendCardOnInterviewSection() {
             <h3 class="company-name text-[#002c5c] text-xl font-semibold">
               ${item.companyName}
             </h3>
-            <i class="fa-solid fa-trash" id="delete-btn"></i>
+            <button class="btn fa-trash"><i class="fa-solid fa-trash"></i></button>
           </div>
           <p class="position text-gray-500">${item.position}</p>
           <ul class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1">
@@ -165,7 +165,7 @@ function appendCardOnInterviewSection() {
             <li class="type">${item.type}</li>
             <li class="salary">${item.salary}</li>
           </ul>
-          <p class="job-status btn">${item.jobStatus}</p>
+          <p class="job-status btn ">${item.jobStatus}</p>
           <p class="description text-gray-700">
             ${item.description}
           </p>
@@ -201,7 +201,7 @@ function appendCardOnRejectedSection() {
             <h3 class="company-name text-[#002c5c] text-xl font-semibold">
               ${item.companyName}
             </h3>
-            <i class="fa-solid fa-trash" id="delete-btn"></i>
+            <button class="btn fa-trash"><i class="fa-solid fa-trash"></i></button>
           </div>
           <p class="position text-gray-500">${item.position}</p>
           <ul class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1">
