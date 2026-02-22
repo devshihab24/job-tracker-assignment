@@ -157,7 +157,7 @@ function appendCardOnInterviewSection() {
             <h3 class="company-name text-[#002c5c] text-xl font-semibold">
               ${item.companyName}
             </h3>
-            <button class="btn fa-trash"><i class="fa-solid fa-trash"></i></button>
+            <i class="fa-solid fa-trash"></i>
           </div>
           <p class="position text-gray-500">${item.position}</p>
           <ul class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1">
@@ -201,7 +201,7 @@ function appendCardOnRejectedSection() {
             <h3 class="company-name text-[#002c5c] text-xl font-semibold">
               ${item.companyName}
             </h3>
-            <button class="btn fa-trash"><i class="fa-solid fa-trash"></i></button>
+            <i class="fa-solid fa-trash"></i>
           </div>
           <p class="position text-gray-500">${item.position}</p>
           <ul class="job-info text-gray-500 text-sm flex flex-col md:flex-row gap-1">
